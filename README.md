@@ -155,5 +155,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@benhuff](https://github.com/benhuff/)
 * [@geoHeil](https://github.com/geoHeil/)
+* [@oblute](https://github.com/oblute/)
 
