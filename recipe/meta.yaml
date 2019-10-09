@@ -10,8 +10,8 @@ source:
   sha256: 0f07d477d057c8b34263a8e173d86fe7b5ca3d6f35be81e5f4db886b81281d9a
 
 build:
-  number: 0
-  skip: True  # [win]
+  number: 1
+  skip: True  # [win and vc<14]
 
 requirements:
   build:
@@ -22,8 +22,9 @@ requirements:
 
 test:
   commands:
-    - test -f $PREFIX/lib/libh3${SHLIB_EXT}
-    - test -f $PREFIX/include/h3/h3api.h
+    - test -f $PREFIX/lib/libh3${SHLIB_EXT}  # [unix]
+    - test -f $PREFIX/include/h3/h3api.h  # [unix]
+    - test -f %PREFIX%\Library\include\h3\h3api.h  # [win]
 
 about:
   home: https://github.com/uber/h3
@@ -37,3 +38,5 @@ about:
 extra:
   recipe-maintainers:
     - geoHeil
+    - benhuff
+    - oblute
