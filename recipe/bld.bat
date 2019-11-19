@@ -1,6 +1,8 @@
 mkdir build
 cd build
 
+set PATH=%LIBRARY_LIB%;%PATH%
+
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^

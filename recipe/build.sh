@@ -2,6 +2,8 @@
 
 set -ex
 
+export LD_LIBRARY_PATH="${PREFIX}/lib"
+
 cmake \
   -DENABLE_FORMAT=OFF \
   -DBUILD_SHARED_LIBS=ON \
