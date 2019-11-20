@@ -1,7 +1,7 @@
 mkdir build
 cd build
 
-cmake -G "%CMAKE_GENERATOR%" ^
+cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
@@ -10,8 +10,8 @@ cmake -G "%CMAKE_GENERATOR%" ^
       ..
 if errorlevel 1 exit 1
 
-cmake --build .
+nmake
 if errorlevel 1 exit 1
 
-cmake --build . --target install
+nmake install
 if errorlevel 1 exit 1
