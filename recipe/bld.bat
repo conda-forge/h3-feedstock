@@ -1,14 +1,13 @@
-mkdir build-shared
-cd build-shared
+mkdir build
+cd build
 
 cmake -G "NMake Makefiles" ^
-      %COMPILER% ^
       -D CMAKE_BUILD_TYPE=Release ^
+      -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
-      -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
-      -D CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE ^
-      -D BUILD_SHARED_LIBS=TRUE ^
+      -D CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=FALSE ^
+      -D BUILD_SHARED_LIBS:BOOL=ON ^
       ..
 if errorlevel 1 exit 1
 
