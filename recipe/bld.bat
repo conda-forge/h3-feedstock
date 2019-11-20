@@ -8,6 +8,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=FALSE ^
       -D BUILD_SHARED_LIBS:BOOL=ON ^
+      -D MSVC_STATIC_RUNTIME=OFF ^
       ..
 if errorlevel 1 exit 1
 
