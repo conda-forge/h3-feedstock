@@ -1,6 +1,7 @@
 mkdir build
 cd build
 
+set CMAKE_GENERATOR="NMake Makefiles"
 cmake -G %CMAKE_GENERATOR% ^
       -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
       %COMPILER% ^
