@@ -3,8 +3,6 @@ cd build
 
 set CMAKE_GENERATOR="NMake Makefiles"
 cmake -G %CMAKE_GENERATOR% ^
-      %COMPILER% ^
-      %SRC_DIR% ^
       -DCMAKE_BUILD_TYPE=Release ^
       -DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=FALSE
       -DBUILD_SHARED_LIBS:BOOL=ON ^
