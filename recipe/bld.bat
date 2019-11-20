@@ -1,13 +1,14 @@
 mkdir build
 cd build
 
-cmake -G "NMake Makefiles" ^
-      -DcMAKE_BUILD_TYPE=Release ^
+cmake -G %CMAKE_GENERATOR% ^
+      -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
+      %COMPILER% ^
+      -DCMAKE_BUILD_TYPE=Release ^
+      -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -DBUILD_SHARED_LIBS:BOOL=ON ^
-      -DCMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
       -DCMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
-      -DCMAKE_INSTALL_PREFIX:PATH=%LIBRARY_PREFIX% ^
-      -DUSE_BLAS:BOOL=OFF ^
+      -DBUILD_SHARED_LIBS:BOOL=ON ^
       ..
 if errorlevel 1 exit 1
 
