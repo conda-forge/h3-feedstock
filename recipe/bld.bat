@@ -10,7 +10,7 @@ cmake -G %CMAKE_GENERATOR% ^
       -DCMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
       -DBUILD_SHARED_LIBS:BOOL=ON ^
-      ..
+      .
 if errorlevel 1 exit 1
 
 cmake --build .
