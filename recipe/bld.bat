@@ -7,7 +7,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
       -D BUILD_SHARED_LIBS=TRUE ^
-      -D CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=FALSE ^
+      -D CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE ^
       ..
 if errorlevel 1 exit 1
 
