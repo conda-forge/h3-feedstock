@@ -6,7 +6,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
-      -D BUILD_SHARED_LIBS=ON ^
+      -D BUILD_SHARED_LIBS:BOOL=ON ^
       ..
 if errorlevel 1 exit 1
 
