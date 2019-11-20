@@ -3,6 +3,7 @@ cd build
 
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
+      -D BUILD_SHARED_LIBS=ON ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
