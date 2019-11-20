@@ -1,17 +1,17 @@
-mkdir build
-cd build
+mkdir build-shared
+cd build-shared
 
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
-      -D BUILD_SHARED_LIBS=ON ^
+      -D BUILD_SHARED_LIBS:BOOL=ON ^
       ..
 if errorlevel 1 exit 1
 
-nmake
+cmake --build .
 if errorlevel 1 exit 1
 
-nmake install
+cmake --build . --target install
 if errorlevel 1 exit 1
