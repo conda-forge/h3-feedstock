@@ -21,7 +21,7 @@ cmake --build . --target install
 if errorlevel 1 exit 1
 
 ls 
-cd generate
+cd generated
 ls
 
 cmake --build . --target all_build
