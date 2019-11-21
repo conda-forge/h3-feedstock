@@ -7,10 +7,11 @@ echo "%SRC_DIR%"
 
 set CMAKE_GENERATOR="NMake Makefiles"
 cmake -G %CMAKE_GENERATOR% ^
-      -DCMAKE_BUILD_TYPE=Release ^
-      -DBUILD_SHARED_LIBS:BOOL=ON ^
-      -DCMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
-      -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
+      -D CMAKE_BUILD_TYPE=Release ^
+      -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
+      -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
+      ..
 if errorlevel 1 exit 1
 
 cmake --build .
