@@ -21,6 +21,7 @@ cmake --build .
 if errorlevel 1 exit 1
 
 ls
+find -iname h3.sln
 
 msbuild ALL_BUILD.vcxproj
 msbuild RUN_TESTS.vcxproj
