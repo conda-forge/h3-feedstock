@@ -1,5 +1,9 @@
-mkdir build
-cd build
+set BUILD_DIR=%SRC_DIR%\build
+
+mkdir %BUILD_DIR%
+cd %BUILD_DIR%
+
+echo "%SRC_DIR%"
 
 set CMAKE_GENERATOR="NMake Makefiles"
 cmake -G %CMAKE_GENERATOR% ^
