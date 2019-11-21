@@ -20,7 +20,11 @@ if errorlevel 1 exit 1
 cmake --build . --target install
 if errorlevel 1 exit 1
 
-cmake --build . --target ALL_BUILD
+ls 
+cd generate
+ls
+
+cmake --build . --target all_build
 if errorlevel 1 exit 1
 
 msbuild ALL_BUILD.vcxproj
