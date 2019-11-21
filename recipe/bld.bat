@@ -17,12 +17,8 @@ if errorlevel 1 exit 1
 cmake --build .
 if errorlevel 1 exit 1
 
-cmake --build .
+cmake --build . --target ALL_BUILD
 if errorlevel 1 exit 1
-
-
-cd %BUILD_DIR%
-ls
 
 msbuild ALL_BUILD.vcxproj
 msbuild RUN_TESTS.vcxproj
