@@ -3,7 +3,7 @@ cd build
 
 set VERBOSE=1
 
-cmake -G "NMake Makefiles" ^
+cmake -G "%CMAKE_GENERATOR%" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
@@ -14,8 +14,8 @@ cmake -G "NMake Makefiles" ^
       ..
 if errorlevel 1 exit 1
 
-cmake --build .
+cmake --build . --config Release
 if errorlevel 1 exit 1
 
-cmake --build . --target h3
+cmake --build . --target h3 --config Release
 if errorlevel 1 exit 1
