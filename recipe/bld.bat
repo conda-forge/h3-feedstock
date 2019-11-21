@@ -16,5 +16,5 @@ if errorlevel 1 exit 1
 cmake --build .
 if errorlevel 1 exit 1
 
-cmake --build . --target install
+cmake --build . --target ALL_BUILD
 if errorlevel 1 exit 1
