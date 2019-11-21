@@ -20,8 +20,9 @@ if errorlevel 1 exit 1
 cmake --build .
 if errorlevel 1 exit 1
 
+
+cd %BUILD_DIR%
 ls
-set SLN_DIR=find -iname h3.sln
-echo "%SLN_DIR%"
+
 msbuild ALL_BUILD.vcxproj
 msbuild RUN_TESTS.vcxproj
