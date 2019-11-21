@@ -3,7 +3,7 @@ cd build
 
 set VERBOSE=1
 
-cmake -G "Visual Studio 14 Win64" ^
+cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
