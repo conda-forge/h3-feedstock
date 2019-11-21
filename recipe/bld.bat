@@ -11,6 +11,7 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=FALSE ^
       -D BUILD_SHARED_LIBS=ON ^
       -D ENABLE_FORMAT=OFF ^
+      %SRC_DIR%
       ..
 if errorlevel 1 exit 1
 
