@@ -14,8 +14,8 @@ cmake -G "NMake Makefiles" ^
       ..
 if errorlevel 1 exit 1
 
-nmake --build . --config Release
+nmake
 if errorlevel 1 exit 1
 
-nmake --build . --target h3 --config Release
+nmake install
 if errorlevel 1 exit 1
