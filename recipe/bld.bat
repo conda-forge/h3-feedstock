@@ -7,7 +7,6 @@ cmake -G %CMAKE_GENERATOR% ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       -D CMAKE_PREFIX_PATH=%LIBRARY_PREFIX% ^
-      -D BUILD_SHARED_LIBS:BOOL=ON ^
       ..
 if errorlevel 1 exit 1
 
@@ -16,3 +15,6 @@ if errorlevel 1 exit 1
 
 cmake --build . --target install
 if errorlevel 1 exit 1
+
+msbuild ALL_BUILD.vcxproj
+msbuild RUN_TESTS.vcxproj
