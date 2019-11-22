@@ -1,9 +1,5 @@
-set BUILD_DIR=%SRC_DIR%\build
-
-mkdir %BUILD_DIR%
-cd %BUILD_DIR%
-
-echo "%SRC_DIR%"
+mkdir build
+cd build
 
 #set CMAKE_GENERATOR="NMake Makefiles"
 set CMAKE_GENERATOR="Visual Studio 15 2017 Win64"
