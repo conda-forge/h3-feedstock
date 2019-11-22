@@ -2,6 +2,7 @@ mkdir build
 cd build
 
 set VERBOSE=1
+set "CFLAGS= -g"
 set VCINSTALLDIR="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\"
 set VS140COMNTOOLS="C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\"
 set CMAKE_GENERATOR="Visual Studio 15 2017 Win64"
