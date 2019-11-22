@@ -6,7 +6,7 @@ cd %BUILD_DIR%
 echo "%SRC_DIR%"
 
 #set CMAKE_GENERATOR="NMake Makefiles"
-set CMAKE_GENERATOR="Visual Studio 15 2017 Win64" ..
+set CMAKE_GENERATOR="Visual Studio 15 2017 Win64"
 cmake -G %CMAKE_GENERATOR% ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
