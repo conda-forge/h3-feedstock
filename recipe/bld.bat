@@ -5,7 +5,7 @@ set VERBOSE=1
 set "CFLAGS= -g"
 set VCINSTALLDIR="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\"
 set VS140COMNTOOLS="C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\"
-set VCTargetsPath=C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140
+set VCTargetsPath="C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V141"
 
 set CMAKE_GENERATOR="Visual Studio 15 2017 Win64"
 
