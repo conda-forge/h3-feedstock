@@ -14,7 +14,7 @@ set VCTargetsPath12 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\
 set VCTargetsPath14 = C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\
 set VCToolsInstallDir = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
 set VCToolsRedistDir = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\Redist\
-
+set VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
 set CMAKE_GENERATOR="Visual Studio 14 2015 Win64"
 
 cmake -G %CMAKE_GENERATOR% ^
