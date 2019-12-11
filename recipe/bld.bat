@@ -4,6 +4,8 @@ cd build
 set "CFLAGS= /LD"
 set "CXXFLAGS= /LD"
 
+set "CXXFLAGS=%CXXFLAGS:-GL=%"
+
 set CMAKE_GENERATOR="NMake Makefiles"
 cmake -G %CMAKE_GENERATOR% ^
       -D CMAKE_BUILD_TYPE=Release ^
