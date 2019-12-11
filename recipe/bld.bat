@@ -1,8 +1,8 @@
 mkdir build
 cd build
 
-set "CXXFLAGS= -MD"
-set
+set "CFLAGS= -LD"
+set "CXXFLAGS= -LD"
 
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
