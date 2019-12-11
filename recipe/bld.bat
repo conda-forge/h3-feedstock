@@ -1,13 +1,10 @@
 mkdir build
 cd build
 
-set "CFLAGS= /LD"
-set "CXXFLAGS= /LD"
+set "CXXFLAGS= -MD"
+set
 
-set "CXXFLAGS=%CXXFLAGS:-GL=%"
-
-set CMAKE_GENERATOR="NMake Makefiles"
-cmake -G %CMAKE_GENERATOR% ^
+cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D BUILD_SHARED_LIBS=TRUE ^
       -D BUILD_GENERATORS=TRUE ^
