@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/uber/h3/archive/v{{ version }}.tar.gz
   sha256: b94fa612f26ceb9f3bcabbb4a425472e548c44d281128842105c71ace651455d
+  patches:
+    - LIB_source_files.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -24,6 +26,7 @@ test:
   commands:
     - test -f $PREFIX/lib/libh3${SHLIB_EXT}  # [unix]
     - test -f $PREFIX/include/h3/h3api.h  # [unix]
+    - test -f %PREFIX%\Library\lib\h3.dll  # [win]
     - test -f %PREFIX%\Library\include\h3\h3api.h  # [win]
 
 about:
