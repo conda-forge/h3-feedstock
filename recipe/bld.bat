@@ -16,7 +16,7 @@ set VCToolsInstallDir = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
 set VCToolsRedistDir = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\Redist\
 set VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\
 set CMAKE_GENERATOR="Ninja"
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /INCREMENTAL:NO" )
+set(CMAKE_EXE_LINKER_FLAGS="${CMAKE_EXE_LINKER_FLAGS} /INCREMENTAL:NO" )
 
 
 cmake -G %CMAKE_GENERATOR% ^
