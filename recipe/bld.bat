@@ -26,8 +26,14 @@ cmake -G %CMAKE_GENERATOR% ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
-cmake --build .
+:: Build.
+cmake --build . --config Release
 if errorlevel 1 exit 1
 
-msbuild ALL_BUILD.vcxproj
-msbuild RUN_TESTS.vcxproj
+:: Install.
+cmake --build . --config Release --target install
+if errorlevel 1 exit 1
+
+
+#msbuild ALL_BUILD.vcxproj
+#msbuild RUN_TESTS.vcxproj
