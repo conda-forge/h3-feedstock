@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/uber/h3/archive/v{{ version }}.tar.gz
   sha256: b94fa612f26ceb9f3bcabbb4a425472e548c44d281128842105c71ace651455d
+  patches:
+    - faceCenterGeo.patch  # [win]
 
 build:
   number: 0

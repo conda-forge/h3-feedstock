@@ -1,0 +1,13 @@
+diff --git a/src/apps/miscapps/generateFaceCenterPoint.c b/src/apps/miscapps/generateFaceCenterPoint.c
+index 68752ef..e270d9f 100644
+--- a/src/apps/miscapps/generateFaceCenterPoint.c
++++ b/src/apps/miscapps/generateFaceCenterPoint.c
+@@ -29,7 +29,7 @@
+ static void generate() {
+     printf("static const Vec3d faceCenterPoint[NUM_ICOSA_FACES] = {\n");
+     for (int i = 0; i < NUM_ICOSA_FACES; i++) {
+-        GeoCoord centerCoords = faceCenterGeo[i];
++        GeoCoord centerCoords = GeoCoord faceCenterGeo[i];
+         Vec3d centerPoint;
+         _geoToVec3d(&centerCoords, &centerPoint);
+         printf("    {%.16f, %.16f, %.16f}, // face %2d\n", centerPoint.x,
