@@ -33,7 +33,3 @@ if errorlevel 1 exit 1
 :: Install.
 cmake --build . --config Release --target install
 if errorlevel 1 exit 1
-
-
-#msbuild ALL_BUILD.vcxproj
-#msbuild RUN_TESTS.vcxproj
