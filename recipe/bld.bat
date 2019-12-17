@@ -4,8 +4,6 @@ cd build
 set VERBOSE=1
 set "CFLAGS= -g"
 
-set CMAKE_C_COMPILER="cl.exe"
-set CMAKE_CXX_COMPILER="cl.exe"
 
 set VCIDEInstallDir = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
 set VCINSTALLDIR = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
@@ -20,6 +18,8 @@ set VS140COMNTOOLS = C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7
 set CMAKE_GENERATOR="Ninja"
 
 cmake -G %CMAKE_GENERATOR% ^
+      -D CMAKE_C_COMPILER="cl.exe" ^
+      -D CMAKE_CXX_COMPILER="cl.exe" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
