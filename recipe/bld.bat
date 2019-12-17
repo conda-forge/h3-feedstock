@@ -21,6 +21,7 @@ cmake -G %CMAKE_GENERATOR% ^
       -D CMAKE_C_COMPILER="cl.exe" ^
       -D CMAKE_CXX_COMPILER="cl.exe" ^
       -D CMAKE_BUILD_TYPE=Release ^
+      -D BUILD_SHARED_LIBS:BOOL=ON ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D CMAKE_LIBRARY_PATH=%LIBRARY_LIB% ^
       %SRC_DIR%
