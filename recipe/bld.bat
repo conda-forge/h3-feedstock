@@ -4,8 +4,8 @@ cd build
 set VERBOSE=1
 set "CFLAGS= -g"
 
-set CC=cl.exe
-set CXX=cl.exe
+set CMAKE_C_COMPILER="cl.exe"
+set CMAKE_CXX_COMPILER="cl.exe"
 
 set VCIDEInstallDir = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
 set VCINSTALLDIR = C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\
