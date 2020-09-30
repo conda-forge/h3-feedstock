@@ -1,5 +1,5 @@
 {% set name = "h3" %}
-{% set version = "3.6.3" %}
+{% set version = "3.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/uber/h3/archive/v{{ version }}.tar.gz
-  sha256: 3ba219959ecb0ef6956f05113aa659d7b605e4eebbdca561b8243ce309e4684e
+  sha256: 7b59780781750d2ccc64c50b6364d706947a684b0cb996c1b104f448562d2d7c
   patches:
     - LIB_source_files.patch  # [win]
 

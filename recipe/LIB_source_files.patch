@@ -3,15 +3,15 @@ index cb697d0..53dd3f9 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -365,9 +365,9 @@ endif()
- 
+
  if(BUILD_GENERATORS)
      # Code generation
 -    add_h3_executable(generateBaseCellNeighbors src/apps/miscapps/generateBaseCellNeighbors.c ${APP_SOURCE_FILES})
 -    add_h3_executable(generateNumHexagons src/apps/miscapps/generateNumHexagons.c ${APP_SOURCE_FILES})
 -    add_h3_executable(generateFaceCenterPoint src/apps/miscapps/generateFaceCenterPoint.c ${APP_SOURCE_FILES})
-+    add_h3_executable(generateBaseCellNeighbors src/apps/miscapps/generateBaseCellNeighbors.c ${LIB_SOURCE_FILES})
-+    add_h3_executable(generateNumHexagons src/apps/miscapps/generateNumHexagons.c ${LIB_SOURCE_FILES})
-+    add_h3_executable(generateFaceCenterPoint src/apps/miscapps/generateFaceCenterPoint.c ${LIB_SOURCE_FILES})
- 
++    add_h3_executable(generateBaseCellNeighbors src/apps/miscapps/generateBaseCellNeighbors.c ${OTHER_SOURCE_FILES})
++    add_h3_executable(generateNumHexagons src/apps/miscapps/generateNumHexagons.c ${OTHER_SOURCE_FILES})
++    add_h3_executable(generateFaceCenterPoint src/apps/miscapps/generateFaceCenterPoint.c ${OTHER_SOURCE_FILES})
+
      # Miscellaneous testing applications - generating random data
      add_h3_executable(mkRandGeo src/apps/testapps/mkRandGeo.c ${APP_SOURCE_FILES})
