@@ -12,11 +12,7 @@ cmake -G "NMake Makefiles" ^
       ..
 if errorlevel 1 exit 1
 
-cmake --build .
-if errorlevel 1 exit 1
-
-cmake --build . --target install
-if errorlevel 1 exit 1
+msbuild ALL_BUILD.vcxproj
 
 :: Move the .dll file to the Library\lib folder.
 move %LIBRARY_BIN%\h3.dll %LIBRARY_LIB%\h3.dll
