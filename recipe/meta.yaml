@@ -1,5 +1,5 @@
 {% set name = "h3" %}
-{% set version = "3.6.3" %}
+{% set version = "3.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,10 @@ package:
 
 source:
   url: https://github.com/uber/h3/archive/v{{ version }}.tar.gz
-  sha256: 3ba219959ecb0ef6956f05113aa659d7b605e4eebbdca561b8243ce309e4684e
-  patches:
-    - LIB_source_files.patch  # [win]
+  sha256: cfa3b4e1d46251929bd30575f09c89edb2c209be7ad8b0af15ff3f9a04132688
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
@@ -31,7 +29,7 @@ test:
 
 about:
   home: https://github.com/uber/h3
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
   summary: 'Hexagonal hierarchical geospatial indexing system'
@@ -40,6 +38,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - mxr-conda
     - geoHeil
     - benhuff
     - oblute
