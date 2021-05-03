@@ -3,12 +3,12 @@ cd build
 
 set "CFLAGS= -LD"
 set "CXXFLAGS= -LD"
+set "ENABLE_REQUIRES_ALL_SYMBOLS=TRUE"
 
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D BUILD_SHARED_LIBS=TRUE ^
       -D BUILD_GENERATORS=TRUE ^
-      -D ENABLE_REQUIRES_ALL_SYMBOLS=TRUE ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       ..
 if errorlevel 1 exit 1
