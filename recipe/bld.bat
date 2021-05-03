@@ -9,7 +9,6 @@ cmake -G "NMake Makefiles" ^
       -D BUILD_SHARED_LIBS=TRUE ^
       -D BUILD_GENERATORS=TRUE ^
       -D ENABLE_REQUIRES_ALL_SYMBOLS=TRUE ^
-      -D BUILD_TESTING=OFF ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       ..
 if errorlevel 1 exit 1
