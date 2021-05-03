@@ -3,7 +3,6 @@ cd build
 
 set "CFLAGS= -LD"
 set "CXXFLAGS= -LD"
-set "ENABLE_REQUIRES_ALL_SYMBOLS=TRUE"
 
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
@@ -12,12 +11,3 @@ cmake -G "NMake Makefiles" ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       ..
 if errorlevel 1 exit 1
-
-cmake --build .
-if errorlevel 1 exit 1
-
-cmake --build . --target install
-if errorlevel 1 exit 1
-
-:: Move the .dll file to the Library\lib folder.
-move %LIBRARY_BIN%\h3.dll %LIBRARY_LIB%\h3.dll
