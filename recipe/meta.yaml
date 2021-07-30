@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/uber/h3/archive/v{{ version }}.tar.gz
   sha256: 803a7fbbeb01f1f65cae9398bda9579a0529e7bafffc6e0e0a6d81a71b305629
-  patches:
-    - LIB_source_files.patch  # [win]
 
 build:
   number: 0
