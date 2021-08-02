@@ -12,9 +12,6 @@ cmake -G "NMake Makefiles" ^
       ..
 if errorlevel 1 exit 1
 
-cat CMakeFiles/CMakeOutput.log
-cat CMakeFiles/CMakeError.log
-
 cmake --build .
 if errorlevel 1 exit 1
 
