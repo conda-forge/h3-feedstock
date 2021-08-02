@@ -12,6 +12,9 @@ cmake -G "NMake Makefiles" ^
       ..
 if errorlevel 1 exit 1
 
+cat CMakeFiles/CMakeOutput.log
+cat CMakeFiles/CMakeError.log
+
 cmake --build .
 if errorlevel 1 exit 1
 
@@ -20,6 +23,3 @@ if errorlevel 1 exit 1
 
 :: Move the .dll file to the Library\lib folder.
 move %LIBRARY_BIN%\h3.dll %LIBRARY_LIB%\h3.dll
-
-cat CMakeFiles/CMakeOutput.log
-cat CMakeFiles/CMakeError.log
