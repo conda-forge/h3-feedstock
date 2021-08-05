@@ -7,7 +7,7 @@ set "CXXFLAGS= -LD"
 cmake -G "NMake Makefiles" ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D BUILD_SHARED_LIBS=TRUE ^
-      -D BUILD_GENERATORS=TRUE ^
+      -D BUILD_GENERATORS=FALSE ^
       -D ENABLE_COVERAGE=FALSE ^
       -D BUILD_BENCHMARKS=FALSE ^
       -D BUILD_FILTERS=TRUE ^
