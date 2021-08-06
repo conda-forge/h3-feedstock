@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   skip: true  # [win and vc<14]
+  missing_dso_whitelist:
+    - '*'
 
 requirements:
   build:
