@@ -10,7 +10,7 @@ source:
   sha256: ec99f1f5974846bde64f4513cf8d2ea1b8d172d2218ab41803bf6a63532272bc
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   missing_dso_whitelist:
     - '*'
