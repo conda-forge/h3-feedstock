@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: h3
+  version: 4.2.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/uber/h3/archive/v${{ version }}.tar.gz
+  sha256: 438db46fc2b388785d2a0d8e26aa5509739240a7b50b2510c416778d871a4e11
+
+build:
+  number: 1
+  skip: win and vc<14
+  dynamic_linking:
+    missing_dso_allowlist:
+      - "*"
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+    - ${{ compiler('cxx') }}
+    - cmake
+    - make
+
+tests:
+  - script:
+      - if: unix
+        then: test -f $PREFIX/lib/libh3${SHLIB_EXT}
+      - if: unix
+        then: test -f $PREFIX/include/h3/h3api.h
+      - if: win
+        then: test -f %PREFIX%\Library\lib\h3.dll
+      - if: win
+        then: test -f %PREFIX%\Library\include\h3\h3api.h
+
+about:
+  license: Apache-2.0
+  license_file: LICENSE
+  summary: Hexagonal hierarchical geospatial indexing system
+  homepage: https://github.com/uber/h3
+  repository: https://github.com/uber/h3
+  documentation: https://uber.github.io/h3/
+
+extra:
+  recipe-maintainers:
+    - mxr-conda
+    - geoHeil
+    - benhuff
+    - oblute
