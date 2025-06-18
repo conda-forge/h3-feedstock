@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: h3
-  version: 4.2.0
+  version: "4.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/uber/h3/archive/v${{ version }}.tar.gz
-  sha256: 438db46fc2b388785d2a0d8e26aa5509739240a7b50b2510c416778d871a4e11
+  sha256: a47cfa36e255e4bf16c63015aaff8e6fe2afc14ffaa3f6b281718158446c0e9b
 
 build:
-  number: 1
+  number: 0
   skip: win and vc<14
   dynamic_linking:
     missing_dso_allowlist:
@@ -30,14 +30,13 @@ requirements:
 tests:
   - script:
       - if: unix
-        then: test -f $PREFIX/lib/libh3${SHLIB_EXT}
-      - if: unix
-        then: test -f $PREFIX/include/h3/h3api.h
+        then:
+          - test -f $PREFIX/lib/libh3${SHLIB_EXT}
+          - test -f $PREFIX/include/h3/h3api.h
       - if: win
-        then: test -f %PREFIX%\Library\lib\h3.dll
-      - if: win
-        then: test -f %PREFIX%\Library\include\h3\h3api.h
-
+        then:
+          - test -f %PREFIX%\Library\lib\h3.dll
+          - test -f %PREFIX%\Library\include\h3\h3api.h
 about:
   license: Apache-2.0
   license_file: LICENSE
