@@ -28,15 +28,17 @@ requirements:
     - make
 
 tests:
-  - script:
-      - if: unix
-        then:
-          - test -f $PREFIX/lib/libh3${SHLIB_EXT}
-          - test -f $PREFIX/include/h3/h3api.h
-      - if: win
-        then:
-          - test -f %PREFIX%\Library\lib\h3.dll
-          - test -f %PREFIX%\Library\include\h3\h3api.h
+  - package_contents:
+      include:
+        - h3api.h
+      lib:
+        - if: win
+          then: h3.lib
+          else: h3
+      bin:
+        - if: win
+          then: h3.dll
+
 about:
   license: Apache-2.0
   license_file: LICENSE
