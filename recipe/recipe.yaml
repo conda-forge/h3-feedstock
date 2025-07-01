@@ -13,7 +13,7 @@ source:
   sha256: a47cfa36e255e4bf16c63015aaff8e6fe2afc14ffaa3f6b281718158446c0e9b
 
 build:
-  number: 0
+  number: 1
   skip: win and vc<14
   dynamic_linking:
     missing_dso_allowlist:
@@ -28,15 +28,17 @@ requirements:
     - make
 
 tests:
-  - script:
-      - if: unix
-        then:
-          - test -f $PREFIX/lib/libh3${SHLIB_EXT}
-          - test -f $PREFIX/include/h3/h3api.h
-      - if: win
-        then:
-          - test -f %PREFIX%\Library\lib\h3.dll
-          - test -f %PREFIX%\Library\include\h3\h3api.h
+  - package_contents:
+      include:
+        - h3/h3api.h
+      lib:
+        - if: win
+          then: h3.lib
+          else: h3
+      bin:
+        - if: win
+          then: h3.dll
+
 about:
   license: Apache-2.0
   license_file: LICENSE
