@@ -30,7 +30,7 @@ requirements:
 tests:
   - package_contents:
       include:
-        - h3api.h
+        - h3/h3api.h
       lib:
         - if: win
           then: h3.lib
