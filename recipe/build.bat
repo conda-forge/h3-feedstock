@@ -5,6 +5,7 @@ set "CFLAGS= -LD"
 set "CXXFLAGS= -LD"
 
 cmake -G "NMake Makefiles" ^
+      %CMAKE_ARGS% ^
       -D CMAKE_BUILD_TYPE=Release ^
       -D BUILD_SHARED_LIBS=TRUE ^
       -D BUILD_GENERATORS=FALSE ^
