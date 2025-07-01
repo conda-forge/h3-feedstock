@@ -13,7 +13,7 @@ source:
   sha256: a47cfa36e255e4bf16c63015aaff8e6fe2afc14ffaa3f6b281718158446c0e9b
 
 build:
-  number: 0
+  number: 1
   skip: win and vc<14
   dynamic_linking:
     missing_dso_allowlist:
