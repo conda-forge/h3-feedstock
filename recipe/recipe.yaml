@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: h3
-  version: "4.4.0"
+  version: "4.4.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/uber/h3/archive/v${{ version }}.tar.gz
-  sha256: b88de0212058812f560c21517e62cd6b2d146f5382b9cc1316bd45c1a3334239
+  sha256: 9df719eb878f218c203e424dc5ffca9b98eca4d78ba83928773987649ead404d
 
 build:
   number: 0
