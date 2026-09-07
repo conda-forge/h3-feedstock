@@ -11,6 +11,8 @@ package:
 source:
   url: https://github.com/uber/h3/archive/v${{ version }}.tar.gz
   sha256: 0da8a392a6ff77e76b60e6a331a49497d0935b6b7b6899da7a3e2786139b0441
+  patches:
+    - patches/relax-cellstomultipoly-area-tolerance.patch
 
 build:
   number: 0
