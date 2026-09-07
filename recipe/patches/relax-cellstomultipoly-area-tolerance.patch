@@ -1,0 +1,15 @@
+diff --git a/src/apps/testapps/testCellsToMultiPoly.c b/src/apps/testapps/testCellsToMultiPoly.c
+index e50774c..85a24a6 100644
+--- a/src/apps/testapps/testCellsToMultiPoly.c
++++ b/src/apps/testapps/testCellsToMultiPoly.c
+@@ -137,9 +137,7 @@ static void check_global_poly(GeoMultiPolygon mpoly) {
+ 
+     double area;
+     geoMultiPolygonAreaRads2(mpoly, &area);
+-    // TODO: probably need some error tolerance, but let's wait to see it fail
+-    // first
+-    t_assert(area == 4 * M_PI, "Exact area expected");
++    t_assert(relative_diff(area, 4 * M_PI) < 1e-12, "Exact area expected");
+ }
+ 
+ SUITE(edgeCellToPoly) {
